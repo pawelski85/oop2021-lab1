@@ -3,7 +3,37 @@
 namespace OOPlab1 {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
+            Animal dog = new Animal();
+
+            dog.Name = "Szarik";
+
+            dog.Feed(2.0);
+
+            string text = dog.returnSpeciesAndName();
+            Console.WriteLine(text);
+            text += " afawefawfawe";
+            Console.WriteLine(text);
+
+            String nameAndOwner = dog.returnNameAndOwner("Kacper");
+            Console.WriteLine(nameAndOwner);
+
+            Human me = new Human();
+            me.FirstName = "Kacper";
+            me.LastName = "Warda";
+            me.Pet = dog;
+
+            dog.Feed(1.0);
+            dog.PrintWeight();
+
+            me.Phone = new Phone("onePlus",
+                "8Pro",
+                2.3,
+                "Android");
+            Console.WriteLine(me.Phone.Model);
+
+            me.Phone = new Phone("apple", "6s", 5.0, "iOs");
+
+            Console.WriteLine(me.Phone.Model);
         }
     }
 }

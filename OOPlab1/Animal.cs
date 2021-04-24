@@ -12,12 +12,18 @@ namespace OOPlab1 {
             Console.WriteLine(weight);
         }
 
-        public void Feed(Double foodWeight) {
+        public void Feed(double foodWeight) {
             weight += foodWeight;
             Console.WriteLine("thx for food, bro");
             Console.WriteLine("my weight is now " + weight);
         }
 
+        public String returnSpeciesAndName() {
+            return Species + " " + Name;
+        }
 
+        public String returnNameAndOwner(string owner) {
+            return Name + " " + owner;
+        }
     }
 }
