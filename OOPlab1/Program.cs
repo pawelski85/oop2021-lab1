@@ -3,11 +3,13 @@
 namespace OOPlab1 {
     class Program {
         static void Main(string[] args) {
-            Animal dog = new Animal();
+            Animal dog = new Animal(5.0);
 
             dog.Name = "Szarik";
 
             dog.Feed(2.0);
+
+            dog.TakeForAWalk();
 
             string text = dog.returnSpeciesAndName();
             Console.WriteLine(text);

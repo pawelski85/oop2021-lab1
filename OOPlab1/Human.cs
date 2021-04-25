@@ -9,5 +9,17 @@ namespace OOPlab1 {
         public Animal Pet;
         public Phone Phone;
         public int Number;
+        private decimal _salary;
+        public decimal Salary
+        {
+            get => _salary;
+            set
+            {
+                if ((value > 0))
+                {
+                    _salary = value;
+                }
+            }
+        }
     }
 }
